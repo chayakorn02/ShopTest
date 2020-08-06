@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoptest</title>
+    <link href="bootstrap-touch-slider.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Bootstrap Touch slider</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+    <link href="bootstrap-touch-slider.css" rel="stylesheet" media="all">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class ="logoimg" src="./assets/logo.svg" alt="logo" />
+            <h4 class="logo"?>Healty Food</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li ><a class="nav-link" href="#">Main</a></li>
+                <li ><a class="nav-link" href="#">Food</a></li>
+                <li ><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-basket2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.111 7.186A.5.5 0 0 1 1.5 7h13a.5.5 0 0 1 .489.605l-1.5 7A.5.5 0 0 1 13 15H3a.5.5 0 0 1-.489-.395l-1.5-7a.5.5 0 0 1 .1-.42zM2.118 8l1.286 6h9.192l1.286-6H2.118z"/>
+                <path fill-rule="evenodd" d="M11.314 1.036a.5.5 0 0 1 .65.278l2 5a.5.5 0 1 1-.928.372l-2-5a.5.5 0 0 1 .278-.65zm-6.628 0a.5.5 0 0 0-.65.278l-2 5a.5.5 0 1 0 .928.372l2-5a.5.5 0 0 0-.278-.65z"/>
+                <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zM0 6.5A.5.5 0 0 1 .5 6h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1z"/>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section class="presentation">
+            <div class="introduction">
+                <div class="intro-text">
+                    <h1>Try Now</h1>
+                    <p>Thai Food Strat 150 ฿</p>
+                </div>
+                <div class="cta">
+                    <button class="cta-select"> Buy Now </button>
+                    <button class="cta-add"> Add To Cart </button>
+                </div>
+            </div>
+            <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
+                <ol class="carousel-indicators">
+                    <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+                    <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="./assets/food1.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <h3 class="p-1">250 ฿</h3>
+
+                    </div>
+                    <div class="item">
+                        <img src="./assets/food2.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <h3 class="p-1">150 ฿</h3>
+                    </div>
+
+                    <div class="item">
+                        <img src="./assets/food3.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <h3 class="p-1">150 ฿</h3>
+                    </div>
+                </div>
+    
+                <!-- Left Control -->
+                <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+    
+                <!-- Right Control -->
+                <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> 
+    
+        </section>
+        <img class="big-circle" src="./assets/big-eclipse.svg" alt="">
+        <img class="mid-circle" src="./assets/mid-eclipse.svg" alt="">
+        <img class="small-circle" src="./assets/small-eclipse.svg" alt="">
+    </main>
+
+    <footer>
+        <div class="footer">Delivery Free 5 km.</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <!-- Bootstrap bootstrap-touch-slider Slider Main JS File -->
+    <script src="bootstrap-touch-slider.js"></script>
+        
+    <script type="text/javascript">
+        $('#bootstrap-touch-slider').bsTouchSlider();
+    </script>
+</body>
+</html>

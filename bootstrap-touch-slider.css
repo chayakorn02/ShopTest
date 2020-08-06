@@ -1,0 +1,440 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+.logoimg{
+    padding-top: 30px;
+    height: 30%;
+    width: 30%;
+}
+.logo-container,.nav-links,.cart{
+    display: flex;
+}
+
+.logo-container{
+    flex: 1;
+}
+.logo{
+    padding-top: 15%;
+    font-weight: 400;
+    margin: 5px;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+nav{
+    flex: 2; 
+}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+    letter-spacing: 4px;
+}
+.nav-link{
+    color: #5f5f79;
+    font-size: 30px;
+    text-decoration: none;
+}
+.cart {
+    flex: 1;
+    justify-content: space-around;
+    size: 10px;
+}
+
+.presentation{
+    display: flex;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text h1{
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964,#6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 15px;
+    padding-left: 40%;
+}
+
+.intro-text p{
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+    letter-spacing: 1px;
+    padding-left: 40%;
+}
+.cta{
+    padding: 30px 0px 0px 40%;
+}
+
+.cta-select{
+    border: 2px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cta-add{
+    background-color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    color: white;
+    margin: 30px 0px 0px 20px;
+    
+}
+
+.big-circle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+    height: 80%;
+}
+
+.mid-circle{
+    position: absolute;
+    top:30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.5;
+}
+
+.small-circle{
+    position: fixed;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+}
+
+.food-select{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;    
+    margin-top: 3%;
+    font-family:'Poppins', sans-serif;
+    letter-spacing: 8px;
+}
+.p-1{
+    color: #c36cbb;
+    margin-left: 70%;
+    letter-spacing: 8px;
+}
+
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.bs-slider{
+    overflow: hidden;
+    max-height: 700px;
+    position: relative;
+}
+.bs-slider:hover {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.bs-slider:active {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+.bs-slider .bs-slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+.bs-slider > .carousel-inner > .item > img,
+.bs-slider > .carousel-inner > .item > a > img {
+    margin: auto;
+    width: auto !important;
+    height: auto;
+    animation: drop 0.5s ease;
+    filter: drop-shadow(0px 5px 3px black );
+}
+
+
+/********************
+*****Slide effect
+**********************/
+
+.fade {
+    opacity: 1;
+}
+.fade .item {
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0 !important;
+    display: block !important;
+    -webkit-transition: opacity ease-in-out 1s;
+    -moz-transition: opacity ease-in-out 1s;
+    -ms-transition: opacity ease-in-out 1s;
+    -o-transition: opacity ease-in-out 1s;
+    transition: opacity ease-in-out 1s;
+}
+.fade .item:first-child {
+    top: auto;
+    position: relative;
+}
+.fade .item.active {
+    opacity: 1;
+    z-index: 2;
+    -webkit-transition: opacity ease-in-out 1s;
+    -moz-transition: opacity ease-in-out 1s;
+    -ms-transition: opacity ease-in-out 1s;
+    -o-transition: opacity ease-in-out 1s;
+    transition: opacity ease-in-out 1s;
+}
+
+/*---------- LEFT/RIGHT ROUND CONTROL ----------*/
+.control-round .carousel-control {
+    top: 47%;
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    z-index: 100;
+    color: #c36cbb;
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 43px;
+    text-shadow: none;
+    position: absolute;
+    font-weight: normal;
+    background: transparent;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+.control-round:hover .carousel-control{
+    opacity: 1;
+}
+.control-round .carousel-control.left {
+    left: 1%;
+}
+.control-round .carousel-control.right {
+    right: 1%;
+}
+.control-round .carousel-control.left:hover,
+.control-round .carousel-control.right:hover{
+    color: #fdfdfd;
+    background: #c36cbb;
+    border: 0px transparent;
+}
+.control-round .carousel-control.left>span:nth-child(1){
+    left: 45%;
+}
+.control-round .carousel-control.right>span:nth-child(1){
+    right: 45%;
+}
+
+
+
+
+
+/*---------- INDICATORS CONTROL ----------*/
+.indicators-line > .carousel-indicators{
+    right: 45%;
+    bottom: 3%;
+    left: auto;
+    width: 90%;
+    height: 20px;
+    font-size: 0;
+    overflow-x: auto;
+    text-align: right;
+    overflow-y: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    white-space: nowrap;
+}
+.indicators-line > .carousel-indicators li{
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #c36cbb;
+    text-indent: 0;
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    letter-spacing: 1px;
+    background: #c36cbb;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+    -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+    transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+    z-index: 10;
+    cursor:pointer;
+}
+.indicators-line > .carousel-indicators li:last-child{
+    margin-right: 0;
+}
+.indicators-line > .carousel-indicators .active{
+    margin: 1px 5px 1px 1px;
+    box-shadow: 0 0 0 2px #fff;
+    background-color: transparent;
+    position: relative;
+    -webkit-transition: box-shadow 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+
+}
+.indicators-line > .carousel-indicators .active:before{
+    transform: scale(0.5);
+    background-color: #fff;
+    content:"";
+    position: absolute;
+    left:-1px;
+    top:-1px;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+
+/*------------------------------------------------------*/
+/* RESPONSIVE
+/*------------------------------------------------------*/
+    /* ขนาด ipad pro */
+@media screen and (max-width: 1024px) {
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+    }
+    .intro-text h1{
+        font-size: 30px;
+        padding-left: 12%;
+    }
+    .intro-text p{
+        font-size: 18px;
+        padding-left: 13%;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .logoimg{
+        height: 50%;
+        width: 50%;
+    }
+    .footer{
+        margin-top: 10%;
+    }
+    .big-circle{
+        top: 0;
+    }
+    .nav-links{
+        padding-left: 15%;
+    }
+    .bs-slider > .carousel-inner > .item > img,
+    .bs-slider > .carousel-inner > .item > a > img {
+        padding-bottom: 1%;
+    }
+    .p-1{
+        margin-left: 45%;
+        padding-bottom: 25%;
+        letter-spacing: 8px;
+    }
+}
+/* ขนาด iphone X */
+@media screen and (max-width: 375px) {
+    .bs-slider > .carousel-inner > .item > img,
+    .bs-slider > .carousel-inner > .item > a > img {
+        padding-bottom: 1%;
+    }
+    .logo-container{
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .nav-link{
+        font-size: 80%;
+        margin: 5px;
+    }
+    .nav-links{
+        padding-right: 40%;
+    }
+    .cart{
+        flex: none;
+        width: 10%;
+        height: 10%;
+    }
+    .intro-text h1{
+        padding-left: 17%;
+    }
+    .intro-text p{
+        padding-left: 18%;
+    }
+    .logo{
+        padding-top: 0%;
+        font-size: 10px;
+        margin: 0; 
+    }
+    .logoimg{
+        padding-left: 15%;
+    }
+    .carousel-indicators{
+        margin-right: -5%;
+    }
+    .p-1{
+        margin-left: 40%;
+        padding-bottom: 25%;
+        letter-spacing: 8px;
+    }
+    }
